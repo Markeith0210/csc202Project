@@ -5,15 +5,16 @@ import java.util.Date;
 public class Lease {
 	public Date Start;
 	public Date End;
-	public String room;
+	//key mapping to room will be hashmap key, but for now marking it here
+	public int roomNumber;
 	public Double rentAmount;
 	
-	public Lease(Date start, Date end, String room, Double rentAmount) {
-		super();
-		Start = start;
-		End = end;
-		this.room = room;
-		this.rentAmount = rentAmount;
+
+	public int getRoomNumber() {
+		return roomNumber;
+	}
+	public void setRoomNumber(int roomNumber) {
+		this.roomNumber = roomNumber;
 	}
 	public Date getStart() {
 		return Start;
@@ -27,11 +28,11 @@ public class Lease {
 	public void setEnd(Date end) {
 		End = end;
 	}
-	public String getRoom() {
-		return room;
+	public int getRoom() {
+		return roomNumber;
 	}
-	public void setRoom(String room) {
-		this.room = room;
+	public void setRoom(int room) {
+		this.roomNumber = room;
 	}
 	public Double getRentAmount() {
 		return rentAmount;
