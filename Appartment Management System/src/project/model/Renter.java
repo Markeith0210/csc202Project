@@ -1,11 +1,16 @@
 package project.model;
 
-import java.util.Date;
+import java.util.Set;
 
 public class Renter extends User{
-	public Date leaseStart;
-	public Date leaseEnd;
-	public String room;
-	public Double rentAmount;
+	Set<Lease> leases;
+
+	public Set<Lease> getLeases() {
+		return leases;
+	}
+
+	public void setLeases(Set<Lease> leases) {
+		this.leases = leases;
+	}
 	
 }

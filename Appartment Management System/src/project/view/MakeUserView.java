@@ -1,20 +1,17 @@
 package project.view;
 
-import project.service.UserService;
+
 import project.controller.Controller;
 import project.view.View;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+
 
 public class MakeUserView extends View {
 	
@@ -65,6 +62,8 @@ public class MakeUserView extends View {
 		grid.add(phoneNumber, 2, 3);
 		// layout
 		HBox buttonLine = new HBox();
+		addUser.setOnAction(addUserEvent);
+		cancel.setOnAction(cancelEvent);
 		buttonLine.getChildren().addAll(addUser, cancel);
 		buttonLine.setSpacing(10);
 		VBox stack = new VBox();

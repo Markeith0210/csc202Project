@@ -1,5 +1,7 @@
 package project.model;
 
-public class Employee extends User{
+import java.util.Set;
 
+public class Employee extends User{
+	Set<Task> tasks;
 }

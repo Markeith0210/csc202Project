@@ -2,8 +2,11 @@ package project.controller;
 
 import project.model.User;
 import project.service.UserService;
+import project.view.EmployeeView;
 import project.view.LoginView;
 import project.view.MakeUserView;
+import project.view.ManagementView;
+import project.view.RenterView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -25,6 +28,9 @@ public class Controller {
 	private Stage primaryStage;
 	private Scene makeUserScene =new Scene(new MakeUserView(this), 300, 200);
 	private Scene makeLoginScene =new Scene(new LoginView(this), 300, 150);
+	private Scene makeRenterScene =new Scene(new RenterView(this), 300, 200);
+	private Scene makeEmployeeScene =new Scene(new EmployeeView(this), 300, 150);
+	private Scene makeManagementScene =new Scene(new ManagementView(this), 300, 150);
 	
 	public Stage getPrimaryStage() {
 		return primaryStage;
@@ -41,12 +47,15 @@ public class Controller {
 		return primaryStage;
 	}
 	public Stage getRenterView(){
+		this.getPrimaryStage().setScene(this.makeRenterScene);
 		return primaryStage;
 	}
 	public Stage getEmployeeView(){
+		this.getPrimaryStage().setScene(this.makeEmployeeScene);
 		return primaryStage;
 	}
-	public Stage getManegmentView(){
+	public Stage getManagementView(){
+		this.getPrimaryStage().setScene(this.makeManagementScene);
 		return primaryStage;
 	}
 	

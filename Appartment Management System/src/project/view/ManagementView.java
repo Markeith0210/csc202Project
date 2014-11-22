@@ -1,5 +1,12 @@
 package project.view;
 
-public class ManagementView {
+import project.controller.Controller;
+
+public class ManagementView extends View{
+
+	public ManagementView(Controller cont) {
+		super(cont);
+		// TODO Auto-generated constructor stub
+	}
 
 }
