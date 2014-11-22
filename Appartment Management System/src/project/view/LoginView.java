@@ -78,7 +78,7 @@ public class LoginView extends View {
 	}
 	
 	public LoginView(Controller controller) {
-		
+		super(controller);
 		
 		
 	}

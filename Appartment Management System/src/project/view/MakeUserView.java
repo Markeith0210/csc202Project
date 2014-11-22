@@ -18,6 +18,10 @@ import javafx.stage.Stage;
 
 public class MakeUserView extends View {
 	
+	public MakeUserView(Controller cont) {
+		super(cont);
+		// TODO Auto-generated constructor stub
+	}
 	Label emailLabel = new Label("Email:");
 	TextField email = new TextField();
 	Label passwordLabel = new Label("Password:");
@@ -68,8 +72,5 @@ public class MakeUserView extends View {
 		stack.setSpacing(10);
 		this.getChildren().add(stack);
 	}
-	public MakeUserView(Controller controller){
-		super();
-		this.setController(controller);
-	}
+	
 }
