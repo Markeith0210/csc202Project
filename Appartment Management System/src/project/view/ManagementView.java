@@ -9,4 +9,10 @@ public class ManagementView extends View{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

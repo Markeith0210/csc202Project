@@ -29,7 +29,6 @@ public class LoginView extends View {
 	private TextField email = new TextField();
 	private Label passwordLabel = new Label("Password:");
 	private TextField password = new TextField();
-	private Stage primaryStage= new Stage();
 	
 	/**
 	 * login event, calls UserService
@@ -44,17 +43,18 @@ public class LoginView extends View {
 	private EventHandler<ActionEvent> makeUserEvent = new EventHandler<ActionEvent>() {
 		@Override
 		public void handle(ActionEvent event) {
-			testScope();
 			getController().getMakeUserView().show();
 		}
 	
 	};
-	{
+
+	public LoginView(Controller controller) {
+		super(controller);
 		GridPane grid = new GridPane();
 		grid.setHgap(10);
 		grid.setVgap(10);
 		grid.setPadding(new javafx.geometry.Insets(10, 10, 10, 10));
-		this.primaryStage.setTitle("Login");
+		this.getController().getPrimaryStage().setTitle("Login");
 		grid.add(emailLabel, 1, 0);
 		grid.add(email, 2, 0);
 		grid.add(passwordLabel, 1, 1);
@@ -65,6 +65,7 @@ public class LoginView extends View {
 		makeUser.setOnAction(this.makeUserEvent);
 		// layout
 		HBox buttonLine = new HBox();
+		buttonLine.setPadding(new javafx.geometry.Insets(10, 10, 10, 10));
 		buttonLine.getChildren().addAll(login, makeUser);
 		buttonLine.setSpacing(10);
 		VBox stack = new VBox();
@@ -72,13 +73,11 @@ public class LoginView extends View {
 		stack.setSpacing(10);
 		this.getChildren().add(stack);
 		
-	
-		
 	}
-	
-	public LoginView(Controller controller) {
-		super(controller);
-		
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
 		
 	}
 
