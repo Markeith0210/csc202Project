@@ -2,7 +2,11 @@ package project.model;
 
 import java.util.Set;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement()
 public class Renter extends User{
+	
 	Set<Lease> leases;
 
 	public Set<Lease> getLeases() {

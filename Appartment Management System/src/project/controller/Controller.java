@@ -12,9 +12,11 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 /**
- * this will contain any stateful objects, getters for the view screens, and (latter)getters for the event handlers.
+ * This will contain any stateful objects, getters for the view screens, and (latter)getters for the event handlers.
  * 
- * considering putting them in hashmaps, so I can just use strings to call them, would make things more loosely coupled :x
+ * Front controller pattern, all view layer requests pass through this object. 
+ * 
+ * Considering putting them in hashmaps, so I can just use strings to call them, would make things more loosely coupled :x
  * @author william
  *
  */
