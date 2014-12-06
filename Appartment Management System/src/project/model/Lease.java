@@ -2,6 +2,8 @@ package project.model;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement()
 public class Lease {
 	public Date Start;
 	public Date End;

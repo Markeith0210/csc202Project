@@ -2,6 +2,8 @@ package project.model;
 
 import java.util.Set;
 
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement()
 public class Employee extends User{
-	Set<Task> tasks;
+	private Set<Task> tasks;
 }

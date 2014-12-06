@@ -2,12 +2,23 @@ package project.model;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement()
 public class Task {
+	public Task() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	//used as map key determined at instance instantiation
+	@XmlElement(required=true)
 	private Integer taskId;
-	
+	@XmlElement(required=true)
 	private Integer roomNumber;
-	
+	@XmlElement(required=true)
 	private String description;
 	
 	private Date dateSubmitted;
