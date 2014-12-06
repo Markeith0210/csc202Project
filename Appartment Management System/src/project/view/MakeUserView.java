@@ -14,46 +14,22 @@ import javafx.scene.layout.VBox;
 
 
 public class MakeUserView extends View {
+	private GridPane grid = new GridPane();
+	private Label emailLabel = new Label("Email:");
+	private TextField email = new TextField();
+	private Label passwordLabel = new Label("Password:");
+	private TextField password = new TextField();
+	private Label nameLabel = new Label("Name:");
+	private TextField name = new TextField();
+	private Label phoneNumberLabel = new Label("Phone#:");
+	private TextField phoneNumber = new TextField();
+	private Button addUser = new Button("Add User");
+	private Button cancel = new Button("Cancel");
 	
 	public MakeUserView(Controller cont) {
 		super(cont);
-		GridPane grid = new GridPane();
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.setPadding(new javafx.geometry.Insets(10, 10, 10, 10));
-		grid.add(emailLabel, 1, 0);
-		grid.add(email, 2, 0);
-		grid.add(passwordLabel, 1, 1);
-		grid.add(password, 2, 1);
-		grid.add(nameLabel, 1, 2);
-		grid.add(name, 2, 2);
-		grid.add(phoneNumberLabel, 1, 3);
-		grid.add(phoneNumber, 2, 3);
-		// layout
-		HBox buttonLine = new HBox();
-		buttonLine.setPadding(new javafx.geometry.Insets(10, 10, 10, 10));
-		addUser.setOnAction(addUserEvent);
-		cancel.setOnAction(cancelEvent);
-		buttonLine.getChildren().addAll(addUser, cancel);
-		buttonLine.setSpacing(10);
-		VBox stack = new VBox();
-		stack.getChildren().addAll(grid, buttonLine);
-		stack.setSpacing(10);
-		this.getChildren().add(stack);
+		init();
 	}
-	
-	Label emailLabel = new Label("Email:");
-	TextField email = new TextField();
-	Label passwordLabel = new Label("Password:");
-	TextField password = new TextField();
-	Label nameLabel = new Label("Name:");
-	TextField name = new TextField();
-	Label phoneNumberLabel = new Label("Phone#:");
-	TextField phoneNumber = new TextField();
-	
-	Button addUser = new Button("Add User");
-	Button cancel = new Button("Cancel");
-	
 	private EventHandler<ActionEvent> addUserEvent = new EventHandler<ActionEvent>() {
 
 		@Override
@@ -70,13 +46,32 @@ public class MakeUserView extends View {
 		}
 	
 	};
-	{
 
-	}
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
 		
+		this.grid.setHgap(10);
+		this.grid.setVgap(10);
+		this.grid.setPadding(new javafx.geometry.Insets(10, 10, 10, 10));
+		this.grid.add(this.emailLabel, 1, 0);
+		this.grid.add(this.email, 2, 0);
+		this.grid.add(this.passwordLabel, 1, 1);
+		this.grid.add(this.password, 2, 1);
+		this.grid.add(this.nameLabel, 1, 2);
+		this.grid.add(this.name, 2, 2);
+		this.grid.add(this.phoneNumberLabel, 1, 3);
+		this.grid.add(this.phoneNumber, 2, 3);
+		// layout
+		HBox buttonLine = new HBox();
+		buttonLine.setPadding(new javafx.geometry.Insets(10, 10, 10, 10));
+		addUser.setOnAction(addUserEvent);
+		cancel.setOnAction(cancelEvent);
+		buttonLine.getChildren().addAll(addUser, cancel);
+		buttonLine.setSpacing(10);
+		VBox stack = new VBox();
+		stack.getChildren().addAll(grid, buttonLine);
+		stack.setSpacing(10);
+		this.getChildren().add(stack);
 	}
 	
 }

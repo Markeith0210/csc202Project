@@ -72,7 +72,7 @@ public class Controller {
 	}
 	
 	public void makeUserAction(String email, String password,String name, String phoneNumber){
-		
+		System.out.println("writing user:" +name);
 		userService.makeUser(new User( email,  password, name, phoneNumber));
 	}
 }

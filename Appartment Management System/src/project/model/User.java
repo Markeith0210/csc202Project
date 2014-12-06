@@ -1,12 +1,17 @@
 package project.model;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement()
 public class User {
+	@XmlElement
 	private String email;
+	@XmlElement
 	private String password;
+	@XmlElement
 	private String name;
+	@XmlElement
 	private String phoneNumber;
 	
 	public User(String email, String password, String name, String phoneNumber) {

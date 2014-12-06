@@ -16,6 +16,7 @@ public abstract class View extends StackPane{
 	}
 	public View(Controller cont){
 		this.controller=cont;
+		
 	}
 	/*
 	 * using initializers everywhere was abusive, 
